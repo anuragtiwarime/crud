@@ -251,7 +251,7 @@ const [userData, setUserData] = useState(null);
 const fetchUsersData = async () => {
   const resp = await axios.get("/getUsers");
 
-  if (resp.data.users.length > 0) {
+  if (resp.data.users.length > -1) {
     setUserData(resp.data.users);
   }
 };
